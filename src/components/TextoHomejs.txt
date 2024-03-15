@@ -1,0 +1,55 @@
+import React, { useState, useEffect, useMemo } from 'react';
+import '../estilos/Home.css'; // Archivo CSS para estilos
+
+
+const TextoHome = () => {
+  const [texto, setTexto] = useState("");
+  const frases = useMemo(()=>["Innovación en Movimiento", "Think"],[]);
+  const [indiceFrase, setIndiceFrase] = useState(0);
+  const [indiceLetra, setIndiceLetra] = useState(0);
+  const [escribiendo, setEscribiendo] = useState(true);
+
+  useEffect(() => {
+    if (escribiendo) {
+      const interval = setInterval(() => {
+        if (indiceLetra < frases[indiceFrase].length) {
+          setTexto(prevTexto => prevTexto + frases[indiceFrase][indiceLetra]);
+          setIndiceLetra(prevIndice => prevIndice + 1);
+        } else {
+          clearInterval(interval); // Detener el intervalo cuando se completa la frase
+          setEscribiendo(false);
+        }
+      }, 100); // Velocidad de escritura
+
+      return () => clearInterval(interval); // Limpiar el intervalo cuando el componente se desmonte
+    }
+  }, [texto, indiceLetra, indiceFrase, escribiendo, frases]);
+
+  useEffect(() => {
+    if (!escribiendo && texto.length > 0) {
+      const interval = setInterval(() => {
+        setTexto(prevTexto => prevTexto.slice(0, -1));
+        if (texto.length === 1) {
+          clearInterval(interval); // Detener el intervalo cuando la frase se haya borrado completamente
+          setIndiceFrase(prevIndice => (prevIndice + 1) % frases.length);
+          setIndiceLetra(0);
+          setEscribiendo(true); // Comenzar a escribir la siguiente frase
+        }
+      }, 100); // Velocidad de borrado
+
+      return () => clearInterval(interval); // Limpiar el intervalo cuando el componente se desmonte
+    }
+  }, [texto, escribiendo, frases.length]);
+
+  return (
+    <div className="texto-izquierdo">
+      <h1>{texto || 'T'}</h1>
+      <p>
+        Garantizamos innovación y calidad superior en cada solución. Avanza con nosotros hacia la excelencia digital y deja que tu visión cobre vida.
+      </p>
+      <button>Conócenos</button>
+    </div>
+  );
+};
+
+export default TextoHome;

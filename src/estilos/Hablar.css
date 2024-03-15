@@ -1,0 +1,45 @@
+.hablar-background{
+  background-color: #334155;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.hablar-content{
+  max-width: 80%;
+}
+
+.hablar-content p{
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.hablar-content strong{
+  font-size: 30px;
+}
+
+.button-hablar{
+  margin-top: 25px;
+  background-color: #1E293B;
+  color: #D4EDE4; /* Color del texto del botón */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  position: relative;
+}
+
+.button-hablar:hover{
+  background-color: #D4EDE4;
+  color: #1E293B;
+}

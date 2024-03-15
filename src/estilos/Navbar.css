@@ -1,0 +1,103 @@
+.navbar {
+  background-color: transparent;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.5s ease-in-out;
+}
+
+
+.logo-navbar img {
+  width: 100px;
+}
+
+
+/*nav links*/
+nav ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex; /*lista horizontal*/
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-links{
+  align-self: center;
+  margin-left: -150px;
+}
+
+.nav-links .nav-blur{
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+
+}
+
+.scrolled .nav-blur{
+  border-radius: 30px; /* Agrega el border-radius cuando se desplaza */
+  backdrop-filter: blur(15px); /* Aplica el efecto de desenfoque al fondo */
+  background-color: rgb(30, 41, 59, 0.5);
+}
+
+.nav-links .nav-blur a {
+  font-weight: bold;
+  color: #D4EDE4;
+  text-decoration: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Eliminar margen derecho del último elemento */
+}
+
+.zona-clientes{
+  background: transparent;
+  backdrop-filter: blur(10px); /* Aplica el efecto de desenfoque al fondo */
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  color: #D4EDE4;
+}
+  
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      padding: 5px; /* Reducir más el padding en dispositivos móviles */
+    }
+
+    .logo-navbar img {
+      display: none; /* Oculta el logo en pantallas pequeñas */
+    }
+  
+    .nav-links{
+      margin-left: 0;
+    }
+
+    .nav-links .nav-blur a {
+      font-size: 12px; /* Reducir más el tamaño del texto en dispositivos móviles */
+    }
+  
+    nav ul li {
+      margin-left: 10px; /* Reducir más el margen en dispositivos móviles */
+      margin-right: 10px; /* Reducir más el margen en dispositivos móviles */
+    }
+  
+    .zona-clientes {
+      padding: 3px 6px; /* Reducir más el padding del botón en dispositivos móviles */
+      font-size: 12px; /* Reducir más el tamaño del texto del botón en dispositivos móviles */
+    }
+  }

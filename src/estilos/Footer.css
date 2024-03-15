@@ -1,0 +1,163 @@
+.footer-distributed {
+  background-color: #1E293B;
+  background-image: url('../img/planetaFondo.png');
+  color: #ffffff;
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: column; /* Centra el contenido horizontalmente */
+}
+
+.footer-left{
+  align-items: center;
+}
+
+.footer-links {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.footer-links li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.footer-center > div {
+  display: flex;
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+.footer-center h6 {
+  margin-right: 10px; /* Ajusta el espaciado entre el icono y el texto */
+  font-size: 15px;
+}
+
+.footer-center p {
+  margin: 0; /* Elimina el margen predeterminado del párrafo */
+  font-size: 1.2rem;
+}
+
+.footer-center a {
+  color: #ffffff; /* Color blanco del enlace de correo electrónico */
+  text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.footer-icons a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 10px;
+  color: #292c2f;
+  text-decoration: none;
+}
+
+.logo-footer img {
+  width: 150px;
+  height: auto;
+}
+
+.footer-right{
+  text-align: center;
+}
+
+.footer-right .footer-company-about {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.footer-right .footer-company-about h1 {
+  color: #ffffff; /* Color del título */
+  font-size: 1.5em; /* Tamaño del título */
+}
+
+.footer-right .footer-company-about p {
+  color: #fff; /* Color del texto */
+  font-size: 1.0em; /* Tamaño del texto */
+}
+
+.footer-icons {
+  margin-top: 20px; /* Espacio entre el texto y los iconos */
+}
+
+.footer-icons a[href="#fa"] svg {
+  color: #0866FF; /* Color azul de Facebook */
+}
+
+.footer-icons a[href="#tw"] svg {
+  color: #000000; /* Color negro de Twitter */
+}
+
+.footer-icons a[href="#li"] svg {
+  color: #0A66C2; /* Color azul de LinkedIn */
+}
+
+.footer-icons a[href="#gi"] svg {
+  color: #ADBAC7; /* Color blanco de GitHub */
+}
+
+.footer-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #292c2f; /* Color de fondo de los iconos */
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 10px; /* Espacio entre los iconos */
+  color: #ffffff; /* Color de los iconos */
+  text-decoration: none;
+}
+
+.footer-icons a:hover {
+  background-color: #ffffff; /* Cambia el color de fondo al pasar el mouse */
+  color: #292c2f; /* Cambia el color del icono al pasar el mouse */
+}
+
+@media screen and (max-width: 768px) {
+  .footer-distributed {
+    flex-direction: column; /* Cambia la dirección del flex container a columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    margin: 20px 0; /* Añade espacio entre los elementos */
+    max-width: none; /* Quita el ancho máximo para que los elementos puedan ocupar toda la pantalla */
+  }
+}
+
+
+
+/**/
+.down-footer{
+  background-color: #334155;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+/**/
